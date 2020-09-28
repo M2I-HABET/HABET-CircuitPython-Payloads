@@ -104,6 +104,7 @@ while True:
         data1 = uartPayload1.read(241)
         sendstr1 = 'P1Dat,'+''.join([chr(b) for b in data1])
         time.sleep(.5)
+        reccount = reccount + 1
     if data1 is None:
         sendData('No Payload 1 Data')
         print('No Payload 1 Data')
@@ -119,6 +120,7 @@ while True:
         data2 = uartPayload1.read(241)
         sendstr2 = 'P2Dat,'+''.join([chr(b) for b in data1])
         time.sleep(.5)
+        reccount = reccount + 1
     if data2 is None:
         sendData('No Payload 2 Data')
         print('No Payload 2 Data')
