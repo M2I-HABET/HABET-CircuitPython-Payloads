@@ -49,7 +49,7 @@ def sendMessage(message):
         # Measures battery voltage and formats it to transmit
         battery_voltage = get_voltage(vbat_voltage)
         v = "{:.2f}".format(battery_voltage)
-        rfm9x.send(FEATHER_ID+b','+message+'V,'+v)
+        rfm9x.send(FEATHER_ID+b','+message+',V,'+v)
     except:
         print("Message failed to send")
 
@@ -85,4 +85,4 @@ while True:
             print("No GPS")
             
     # Pauses for 1 second before restaring the cycle
-    time.sleep(1)
+    time.sleep(.1)
